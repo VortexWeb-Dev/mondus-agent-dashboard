@@ -1,0 +1,16 @@
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f5f5f5; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 8px; /* Roundness of the scrollbar handle */
+    border: 1px solid #f5f5f5; /* Space around the handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #999; /* Color when hovered */
+}
+
