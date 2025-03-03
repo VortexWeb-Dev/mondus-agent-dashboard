@@ -39,6 +39,7 @@ function filterRankings($rank_data, $user_id)
     return $ranking;
 }
 
+$weekwise_ranked_agents = filterRankings($global_ranking[$selected_year]['weekwise_rank'] ?? [], $current_user_id);
 $monthwise_ranked_agents = filterRankings($global_ranking[$selected_year]['monthwise_rank'] ?? [], $current_user_id);
 $quarterly_ranked_agents = filterRankings($global_ranking[$selected_year]['quarterly_rank'] ?? [], $current_user_id);
 $yearly_ranked_agents = filterRankings($global_ranking[$selected_year]['yearly_rank'] ?? [], $current_user_id);
@@ -77,7 +78,11 @@ function renderTable($ranked_agents, $label)
         <?php include('./includes/datepicker.php'); ?>
         <h1 class="text-xl text-center font-bold mb-4 dark:text-gray-200"><?= $agent_name ?>'s Rankings</h1>
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">            
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm h-[400px] flex flex-col gap-1">
+                    <h2 class="text-xl font-semibold mb-6 dark:text-white">Weekly Ranking</h2>
+                    <?php renderTable($weekwise_ranked_agents, 'Week'); ?>
+                </div>
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm h-[400px] flex flex-col gap-1">
                     <h2 class="text-xl font-semibold mb-6 dark:text-white">Monthly Ranking</h2>
                     <?php renderTable($monthwise_ranked_agents, 'Month'); ?>
