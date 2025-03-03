@@ -21,6 +21,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </a>
             </li>
         </ul>
+        <ul class="flex flex-col gap-2 mb-2">
+            <li class="text-sm">
+                <a href="https://mondus.group/report/analytics/?analyticBoardKey=crm_sales_funnel" class="block p-2 rounded transition duration-200 hover:bg-gray-700" target="_blank">
+                    <i class="fas fa-chart-line mr-2"></i> Sales Funnel
+                </a>
+            </li>
+        </ul>
     </div>
     <div class="p-6 text-sm text-gray-400 text-center">
         © <?= date('Y') ?> Mondus Group.
