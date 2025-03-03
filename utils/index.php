@@ -2,15 +2,22 @@
 
 function get_quarter($month)
 {
-    if ($month == 'Jan' || $month == 'Feb' || $month == 'Mar') {
-        return 'Q1';
-    } elseif ($month == 'Apr' || $month == 'May' || $month == 'Jun') {
-        return 'Q2';
-    } elseif ($month == 'Jul' || $month == 'Aug' || $month == 'Sep') {
-        return 'Q3';
-    } elseif ($month == 'Oct' || $month == 'Nov' || $month == 'Dec') {
-        return 'Q4';
-    }
+    $quarters = [
+        'Jan' => 'Q1',
+        'Feb' => 'Q1',
+        'Mar' => 'Q1',
+        'Apr' => 'Q2',
+        'May' => 'Q2',
+        'Jun' => 'Q2',
+        'Jul' => 'Q3',
+        'Aug' => 'Q3',
+        'Sep' => 'Q3',
+        'Oct' => 'Q4',
+        'Nov' => 'Q4',
+        'Dec' => 'Q4'
+    ];
+
+    return $quarters[$month] ?? 'Q1';
 }
 
 function clearCache($fileName)
