@@ -81,18 +81,30 @@ function renderTable($ranked_agents, $label)
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">            
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm h-[400px] flex flex-col gap-1">
                     <h2 class="text-xl font-semibold mb-6 dark:text-white">Weekly Ranking</h2>
+                    <a href="download_rankings.php?year=<?= $selected_year ?>" 
+                        class="text-xs bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">Download
+                    </a>
                     <?php renderTable($weekwise_ranked_agents, 'Week'); ?>
                 </div>
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm h-[400px] flex flex-col gap-1">
                     <h2 class="text-xl font-semibold mb-6 dark:text-white">Monthly Ranking</h2>
+                    <a href="download_rankings.php?year=<?= $selected_year ?>" 
+                        class="text-xs bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">Download
+                    </a>
                     <?php renderTable($monthwise_ranked_agents, 'Month'); ?>
                 </div>
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm h-[400px] flex flex-col gap-1">
                     <h2 class="text-xl font-semibold mb-6 dark:text-white">Quarterly Ranking</h2>
+                    <a href="download_rankings.php?year=<?= $selected_year ?>" 
+                        class="text-xs bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">Download
+                    </a>
                     <?php renderTable($quarterly_ranked_agents, 'Quarter'); ?>
                 </div>
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm h-[400px] flex flex-col gap-1">
                     <h2 class="text-xl font-semibold mb-6 dark:text-white">Yearly Ranking</h2>
+                    <a href="download_rankings.php?year=<?= $selected_year ?>" 
+                        class="text-xs bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">Download
+                    </a>
                     <?php renderTable($yearly_ranked_agents, 'Year'); ?>
                 </div>
             </div>
