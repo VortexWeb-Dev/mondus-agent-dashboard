@@ -106,7 +106,7 @@
                         <td class="p-4">${deal.TITLE}</td>
                         <td class="p-4">${deal.OPPORTUNITY}</td>
                         <td class="p-4">${deal.TYPE_ID}</td>
-                        <td class="p-4">${deal.UF_CRM_1727628122686}</td>
+                        <td class="p-4">${deal.UF_CRM_1743654324990}</td>
                         <td class="p-4">${formatDate(deal.DATE_CREATE)}</td>
                     `;
                     dealsTable.appendChild(row);
